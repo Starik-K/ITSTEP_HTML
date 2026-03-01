@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Cats Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            text-align: center;
+        }
+
+        h1 {
+            margin-top: 20px;
+        }
+
+        .gallery {
+            width: 800px;
+            margin: 20px auto;
+            background: rgb(122, 152, 203);
+            border: 1px solid #1708bd;
+        }
+
+        .big-image {
+            border-top: 1px solid #ccc;
+            border-bottom: 1px solid #ccc;
+            padding: 20px;
+        }
+
+        iframe {
+            width: 500px;
+            height: 400px;
+            border: 3px solid #999;
+        }
+
+        .thumbnails {
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+            gap: 10px;
+        }
+
+        .thumbnails img {
+            width: 100px;
+            height: 80px;
+            cursor: pointer;
+            border: 2px solid #ccc;
+        }
+
+        .thumbnails img:hover {
+            border: 2px solid #333;
+        }
+    </style>
+</head>
+<body>
+
+<div class="gallery">
+    <h1>CATS GALLERY</h1>
+
+    <div class="big-image">
+        <iframe name="bigFrame" src="https://th.bing.com/th/id/OIP.LCH2Rhzm5P04jwfhQVObawHaFj?w=239&h=180&c=7&r=0&o=7&dpr=2&pid=1.7&rm=3"></iframe>
+    </div>
+
+    <div class="thumbnails">
+        <a href="https://th.bing.com/th/id/OIP.LCH2Rhzm5P04jwfhQVObawHaFj?w=239&h=180&c=7&r=0&o=7&dpr=2&pid=1.7&rm=3" target="bigFrame">
+            <img src="https://th.bing.com/th/id/OIP.LCH2Rhzm5P04jwfhQVObawHaFj?w=239&h=180&c=7&r=0&o=7&dpr=2&pid=1.7&rm=3" alt="Cat 1">
+        </a>
+        <a href="https://th.bing.com/th/id/OIP.1TgwiXw0kNejhXtZIjzqFQHaFg?w=241&h=180&c=7&r=0&o=7&dpr=2&pid=1.7&rm=3" target="bigFrame">
+            <img src="https://th.bing.com/th/id/OIP.1TgwiXw0kNejhXtZIjzqFQHaFg?w=241&h=180&c=7&r=0&o=7&dpr=2&pid=1.7&rm=3" alt="Cat 2">
+        </a>
+        <a href="https://th.bing.com/th/id/OIP.-r-htrug4FC04yw1fneA5AHaE8?w=269&h=180&c=7&r=0&o=7&dpr=2&pid=1.7&rm=3" target="bigFrame">
+            <img src="https://th.bing.com/th/id/OIP.-r-htrug4FC04yw1fneA5AHaE8?w=269&h=180&c=7&r=0&o=7&dpr=2&pid=1.7&rm=3" alt="Cat 3">
+        </a>
+        <a href="https://th.bing.com/th/id/OIP.OnrmEDqWhNmw1fyZ2CMHlQHaD4?w=287&h=180&c=7&r=0&o=7&dpr=2&pid=1.7&rm=3" target="bigFrame">
+            <img src="https://th.bing.com/th/id/OIP.OnrmEDqWhNmw1fyZ2CMHlQHaD4?w=287&h=180&c=7&r=0&o=7&dpr=2&pid=1.7&rm=3" alt="Cat 4">
+        </a>
+        <a href="https://th.bing.com/th?q=%d0%9a%d0%be%d1%82+%d0%9d%d0%b0+%d0%9f%d0%b0%d0%bb%d1%8c%d1%86%d0%b5&w=120&h=120&c=1&rs=1&qlt=70&o=7&cb=1&dpr=2&pid=InlineBlock&rm=3&mkt=ru-RU&cc=RU&setlang=ru&adlt=strict&t=1&mw=247" target="bigFrame">
+            <img src="https://th.bing.com/th?q=%d0%9a%d0%be%d1%82+%d0%9d%d0%b0+%d0%9f%d0%b0%d0%bb%d1%8c%d1%86%d0%b5&w=120&h=120&c=1&rs=1&qlt=70&o=7&cb=1&dpr=2&pid=InlineBlock&rm=3&mkt=ru-RU&cc=RU&setlang=ru&adlt=strict&t=1&mw=247" alt="Cat 5">
+        </a>
+    </div>
+</div>
+
+</body>
+</html>
