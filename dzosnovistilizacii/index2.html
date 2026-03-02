@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PART2</title>
+</head>
+<style>
+body{
+    background: rgb(182, 198, 246);
+    font-family: 'Times New Roman', Times, serif;
+}
+h1{
+    text-align: center;
+}
+ul{
+    width: 400px;
+    margin: 30px auto;
+    padding: 0;
+    list-style: none;
+}
+li{
+    padding: 10px 15px;
+    position: relative;
+}
+li:nth-child(odd){
+    background-color: aqua;
+}
+li:nth-child(even){
+    background-color: rgb(185, 79, 168);
+}
+li.done{
+    background: whitesmoke;
+    text-decoration: line-through;
+}
+li::after{
+    content: "x";
+    color: crimson;
+    position: absolute;
+    right: 15px;
+}
+.icon{
+    margin-right: 10px;
+}
+
+
+
+
+
+</style>
+<body>
+    <h1>My To Do List</h1>
+    <ul>
+        <li><span class="icon">#</span>hit The Gym</li>
+        <li class="done"><span class="icon">$</span>play hoi4</li>
+        <li><span class="icon">#</span>Meet John</li>
+        <li><span class="icon">#</span>watch YT</li>
+        <li><span class="icon">#</span>Buy vodka</li>
+        <li><span class="icon">#</span>sleep after dinner</li>
+        <li><span class="icon">#</span>eat dinner</li>
+        <li><span class="icon">#</span>go to shop</li>
+
+
+
+
+
+    </ul>
+</body>
+</html>
