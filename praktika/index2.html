@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<title>bebebe</title>
+
+<style>
+
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.menu{
+    background:#5f8f6f;
+}
+
+.menu ul{
+    list-style:none;
+    margin:0;
+    padding:0;
+    display:flex;
+}
+
+.menu li{
+    position:relative;
+}
+
+.menu a{
+    display:block;
+    padding:15px 25px;
+    color:white;
+    text-decoration:none;
+}
+
+.menu li:hover{
+    background:#137e37;
+}
+
+.submenu{
+    display:none;
+    position:absolute;
+    top:100%;
+    left:0;
+    background:#57cb7d;
+    flex-direction:column;
+}
+
+.submenu li{
+    width:150px;
+}
+
+.menu li:hover > .submenu{
+    display:block;
+}
+
+.submenu .submenu{
+    left:100%;
+    top:0;
+}
+
+.content{
+    padding:20px;
+}
+
+</style>
+</head>
+
+<body>
+
+<nav class="menu">
+
+<ul>
+
+<li><a href="#">Home</a></li>
+
+<li>
+
+<a href="#">Categories</a>
+
+<ul class="submenu">
+
+<li>
+
+<a href="#">Man</a>
+
+<ul class="submenu">
+<li><a href="#">Pants</a></li>
+<li><a href="#">Shoes</a></li>
+</ul>
+
+</li>
+
+<li>
+
+<a href="#">Women</a>
+
+<ul class="submenu">
+<li><a href="#">Dress</a></li>
+<li><a href="#">Kids</a></li>
+</ul>
+
+</li>
+
+</ul>
+
+</li>
+
+<li><a href="#">About</a></li>
+<li><a href="#">Contacts</a></li>
+
+</ul>
+
+</nav>
+
+<div class="content">
+
+<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Nulla ac augue quis ante blandit blandit eu et massa.
+</p>
+
+</div>
+
+</body>
+</html>
