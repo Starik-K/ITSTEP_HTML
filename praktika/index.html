@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<title>идк</title>
+
+<style>
+
+body{
+    font-family: Arial;
+}
+
+.button{
+    padding:15px 20px;
+    background:rgb(144, 201, 227);
+    color:rgb(224, 233, 208);
+    text-decoration:none;
+}
+
+.modal{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(13, 13, 13, 0.5);
+    display:none;
+}
+
+.modal:target{
+    display:block;
+}
+
+.modal-content{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    background:white;
+    padding:20px;
+    width:400px;
+}
+
+.close{
+    float:right;
+    text-decoration:none;
+    font-size:20px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>What is Lorem Ipsum?</h1>
+
+<a href="modal" class="button">Open Modal</a>
+
+<div id="modal" class="modal">
+
+<div class="modal-content">
+
+<a href="#" class="close">×</a>
+
+<h3>MODAL WINDOW</h3>
+
+<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Mauris tristique sagittis tincidunt.
+</p>
+
+</div>
+
+</div>
+
+</body>
+</html>
