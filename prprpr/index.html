@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<title>zdddz</title>
+
+<style>
+
+body{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background:#eaeaea;
+    margin:0;
+    padding:40px;
+}
+
+.container{
+    display:flex;
+    justify-content:center;
+    gap:32px;
+}
+
+.plan{
+    background:white;
+    width:220px;
+    padding:20px;
+    text-align:center;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.2);
+
+    transition: transform 1s;
+}
+
+.plan:hover{
+    transform:scale(1.15);
+}
+
+.title{
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+.price{
+    font-size:40px;
+    margin:10px 0;
+}
+
+.month{
+    color:gray;
+    margin-bottom:15px;
+}
+
+ul{
+    list-style:none;
+    padding:0;
+    margin:15px 0;
+}
+
+li{
+    margin:5px 0;
+}
+
+button{
+    margin-top:15px;
+    padding:10px 20px;
+    border:none;
+    border-radius:5px;
+    color:aliceblue;
+    cursor:pointer;
+}
+
+.enterprise button{background:#ff001e;}
+.professional button{background:#0ce165;}
+.standard button{background:#4c79a3;}
+.basic button{background:#66b44d;}
+
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+<div class="plan enterprise">
+<div class="title">ENTERPRISE</div>
+<div class="price">$69</div>
+<div class="month">per month</div>
+
+<ul>
+<li>10GB disk space</li>
+<li>100GB monthly bandwidth</li>
+<li>20 email accounts</li>
+<li>Unlimited subdomains</li>
+</ul>
+
+<button>BUY</button>
+</div>
+
+<div class="plan professional">
+<div class="title">PROFESSIONAL</div>
+<div class="price">$29</div>
+<div class="month">per month</div>
+
+<ul>
+<li>5GB disk space</li>
+<li>60GB monthly bandwidth</li>
+<li>10 email accounts</li>
+<li>Unlimited subdomains</li>
+</ul>
+
+<button>BUY</button>
+</div>
+
+<div class="plan standard">
+<div class="title">STANDARD</div>
+<div class="price">$19</div>
+<div class="month">per month</div>
+
+<ul>
+<li>3GB disk space</li>
+<li>30GB monthly bandwidth</li>
+<li>5 email accounts</li>
+<li>Unlimited subdomains</li>
+</ul>
+
+<button>BUY</button>
+</div>
+
+<div class="plan basic">
+<div class="title">BASIC</div>
+<div class="price">$9</div>
+<div class="month">per month</div>
+
+<ul>
+<li>1GB disk space</li>
+<li>10GB monthly bandwidth</li>
+<li>2 email accounts</li>
+<li>Unlimited subdomains</li>
+</ul>
+
+<button>BUY</button>
+</div>
+
+</div>
+
+</body>
+</html>
