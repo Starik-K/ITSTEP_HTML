@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Menu</title>
+
+<style>
+
+body{
+margin:0;
+font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+background:#f4f4f4;
+}
+
+.menu{
+background:#5f8f6f;
+text-align:center;
+}
+
+.menu ul{
+margin:0;
+padding:0;
+list-style:none;
+}
+
+.menu > ul > li{
+display:inline-block;
+position:relative;
+}
+
+.menu a{
+color:white;
+padding:15px 25px;
+display:block;
+text-decoration:none;
+}
+
+.menu li:hover{
+background:#4e7a5e;
+}
+
+.sub{
+display:none;
+position:absolute;
+top:100%;
+left:0;
+background:#5f8f6f;
+}
+
+.sub li{
+position:relative;
+width:160px;
+}
+
+.sub2{
+display:none;
+position:absolute;
+top:0;
+left:100%;
+background:#5f8f6f;
+}
+
+.menu li:hover > .sub{
+display:block;
+}
+
+.sub li:hover > .sub2{
+display:block;
+}
+
+.content{
+width:900px;
+margin:30px auto;
+padding:20px;
+background:white;
+line-height:1.6;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="menu">
+<ul>
+
+<li><a href="#">Home</a></li>
+
+<li>
+<a href="#">Categories</a>
+
+<ul class="sub">
+<li>
+<a href="#">Man</a>
+<ul class="sub2">
+<li><a href="#">Dress</a></li>
+<li><a href="#">Pants</a></li>
+<li><a href="#">Shoes</a></li>
+</ul>
+</li>
+
+<li>
+<a href="#">Women</a>
+<ul class="sub2">
+<li><a href="#">Dress</a></li>
+<li><a href="#">Pants</a></li>
+<li><a href="#">Shoes</a></li>
+</ul>
+</li>
+
+<li>
+<a href="#">Kids</a>
+<ul class="sub2">
+<li><a href="#">Dress</a></li>
+<li><a href="#">Pants</a></li>
+<li><a href="#">Shoes</a></li>
+</ul>
+</li>
+
+</ul>
+
+</li>
+
+<li><a href="#">About</a></li>
+<li><a href="#">Contacts</a></li>
+
+</ul>
+</div>
+
+<div class="content">
+
+<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac augue quis ante blandit blandit eu et massa.
+Integer libero dui, pellentesque id laoreet eu, dignissim non ex. Donec a purus non augue rutrum semper eget quis justo.
+Etiam ultrices ante at elit porttitor malesuada.
+</p>
+
+<p>
+Proin feugiat tempus massa non venenatis. Suspendisse id leo eros. Fusce sodales elementum purus, eu rutrum arcu blandit eu.
+Ut convallis, ex et ullamcorper facilisis, arcu risus bibendum ipsum, vel scelerisque eros metus ac odio.
+</p>
+
+<p>
+Maecenas euismod velit odio, a mattis turpis dictum vel. Maecenas nibh elit, ullamcorper eget tortor a, suscipit mattis mauris.
+Aliquam nec fringilla lectus, eu luctus quam. Aliquam finibus, risus eget congue iaculis, elit sapien convallis risus.
+</p>
+
+</div>
+
+</body>
+</html>
