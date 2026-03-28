@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<title>Вкладки</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.tabs {
+    width: 200px;
+    background: #777;
+    display: flex;
+    flex-direction: column;
+}
+
+.tab {
+    padding: 15px;
+    color: white;
+    cursor: pointer;
+    border-bottom: 1px solid #666;
+    transition: 0.3s;
+}
+
+.tab:hover {
+    background: #555;
+}
+.tab.active {
+    background: #333;
+}
+.content {
+    flex: 1;
+    background: #555;
+    padding: 20px;
+}
+
+.blocks {
+    display: flex;
+    gap: 20px;
+}
+
+.block {
+    background: #666;
+    padding: 10px;
+    width: 100%;
+    color: white;
+}
+
+.block img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.block h3 {
+    margin: 10px 0 5px;
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+    <div class="tabs">
+        <div class="tab active" onclick="openTab(0)">Tab 1</div>
+        <div class="tab" onclick="openTab(1)">Tab 2</div>
+        <div class="tab" onclick="openTab(2)">Tab 3</div>
+    </div>
+
+    <div class="content">
+        <div class="tab-content">
+            <div class="blocks">
+                <div class="block">
+                    <img src="https://cdn.paleo.gg/games/jwe2/images/dino/spinosaurus.png">
+                    <h3>carni</h3>
+                    <p>apex</p>
+                </div>
+
+                <div class="block">
+                    <img src="https://cdn.paleo.gg/games/jwe2/images/dino/acrocanthosaurus.png">
+                    <h3>carni</h3>
+                    <p>apex.</p>
+                </div>
+
+                <div class="block">
+                    <img src="https://cdn.paleo.gg/games/jwe2/images/dino/australovenator.png">
+                    <h3>carni</h3>
+                    <p>apex</p>
+                </div>
+            </div>
+        </div>
+        <div class="tab-content" style="display:none;">
+            <div class="blocks">
+                <div class="block">
+                    <img src="https://cdn.paleo.gg/games/jwe2/images/dino/alamosaurus.png">
+                    <h3>Tab 2 - 1</h3>
+                    <p>2-1</p>
+                </div>
+
+                <div class="block">
+                    <img src="https://cdn.paleo.gg/games/jwe2/images/dino/apatosaurus.png">
+                    <h3>Tab 2 - 2</h3>
+                    <p>2-2</p>
+                </div>
+
+                <div class="block">
+                    <img src="https://cdn.paleo.gg/games/jwe2/images/dino/ankylodocus.png">
+                    <h3>Tab 2 - 3</h3>
+                    <p>2-3</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-content" style="display:none;">
+            <div class="blocks">
+                <div class="block">
+                    <img src="https://cdn.paleo.gg/games/jwe2/images/dino/camarasaurus.png">
+                    <h3>Tab 3 - 1</h3>
+                    <p>3-1</p>
+                </div>
+
+                <div class="block">
+                    <img src="https://cdn.paleo.gg/games/jwe2/images/dino/amargasaurus.png">
+                    <h3>Tab 3 - 2</h3>
+                    <p>3-2</p>
+                </div>
+
+                <div class="block">
+                    <img src="https://cdn.paleo.gg/games/jwe2/images/dino/deinocheirus.png">
+                    <h3>Tab 3 - 3</h3>
+                    <p>3-3</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+function openTab(index) {
+    let tabs = document.querySelectorAll(".tab");
+    let contents = document.querySelectorAll(".tab-content");
+
+    tabs.forEach(tab => tab.classList.remove("active"));
+    contents.forEach(c => c.style.display = "none");
+
+    tabs[index].classList.add("active");
+    contents[index].style.display = "block";
+}
+</script>
+
+</body>
+</html>
