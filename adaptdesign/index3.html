@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    display: flex;
+    background: #f0f0f0;
+}
+
+.sidebar {
+    width: 220px;
+    background: #2f2f2f;
+    color: white;
+    min-height: 100vh;
+    position: sticky;
+    top: 0;
+}
+
+.logo {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Место под фото */
+.img-box {
+    width: 100%;
+    height: 120px;
+    background: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.menu {
+    list-style: none;
+}
+
+.menu li {
+    padding: 15px 20px;
+    border-bottom: 1px solid #444;
+    cursor: pointer;
+}
+
+.menu li:hover {
+    background: #444;
+}
+
+.main {
+    flex: 1;
+    padding: 20px;
+}
+
+.header {
+    background: #dcdcdc;
+    padding: 15px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: white;
+    padding: 15px;
+    flex: 1;
+    min-width: 250px;
+}
+
+.table {
+    margin-top: 20px;
+    background: white;
+    padding: 15px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    text-align: left;
+}
+
+th {
+    background: #eee;
+}
+
+@media (max-width: 600px) {
+    body {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        position: relative;
+    }
+
+    .cards {
+        flex-direction: column;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="sidebar">
+    <div class="logo">
+        <div class="img-box">
+<img src="https://www.naira.kz/wp-content/uploads/2021/08/image38-min-37.jpeg">
+        </div>
+    </div>
+
+    <ul class="menu">
+        <li>Dashboard</li>
+        <li>Users</li>
+        <li>File Manager</li>
+        <li>Posts</li>
+        <li>Events</li>
+    </ul>
+</div>
+
+<div class="main">
+    <div class="header">
+        Dashboard - May 25, 2019
+    </div>
+
+    <div class="cards">
+        <div class="card">
+            <h3>Traffic</h3>
+
+            <div class="img-box">
+<img src="https://static.tildacdn.com/tild3034-3431-4361-a261-313535316264/What_is_Markdown_Pri.jpg">
+            </div>
+
+            <p>Lorem ipsum dolor sit amet...</p>
+        </div>
+
+        <div class="card">
+            <h3>Loads</h3>
+
+            <div class="img-box">
+<img src="https://tse4.mm.bing.net/th/id/OIP.bFHJEMExoTGoS3MoF9-UigHaE4?w=1242&h=820&rs=1&pid=ImgDetMain&o=7&rm=3">
+            </div>
+
+            <p>Lorem ipsum dolor sit amet...</p>
+        </div>
+    </div>
+
+    <div class="table">
+        <h3>Recent Activity</h3>
+        <table>
+            <tr>
+                <th>#</th>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Date</th>
+            </tr>
+
+            <tr>
+                <td>1</td>
+                <td>Lorem ipsum dolor sit amet</td>
+                <td>John Doe</td>
+                <td>25/05/19</td>
+            </tr>
+
+            <tr>
+                <td>2</td>
+                <td>Consectetur adipiscing elit</td>
+                <td>Jane Smith</td>
+                <td>24/05/19</td>
+            </tr>
+
+            <tr>
+                <td>3</td>
+                <td>Sed do eiusmod tempor</td>
+                <td>Mike Ross</td>
+                <td>23/05/19</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+</body>
+</html>
