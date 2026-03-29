@@ -1,163 +1,125 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>dzdzdzzdzdzdzd</title>
+
+<title>Article</title>
 
 <style>
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
 body {
-    background: #f2f2f2;
-    padding: 20px;
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-.upload-box {
-    max-width: 900px;
-    margin: 0 auto;
-    background: white;
-    border: 2px solid #ddd;
-    padding: 15px;
-    display: flex;
-    gap: 15px;
-    align-items: center;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+.container {
+    background: #0c4f4f;
+    color: white;
+    padding: 60px;
 }
 
-.image-block {
-    width: 180px;
-    height: 100px;
-    background: #d9d9d9;
-    flex-shrink: 0;
+h1 {
+    font-size: 42px;
+    line-height: 1.2;
+    margin-bottom: 40px;
+}
+
+.info {
     display: flex;
     align-items: center;
-    justify-content: center;
+    gap: 30px;
 }
 
-.image-block img {
-    width: 70px;
-    height: 70px;
-    object-fit: contain;
-}
-
-.info-block {
-    flex: 1;
-}
-
-.progress-row {
-    display: flex;
-    align-items: center;
-    border: 1px solid #b8bfd6;
-    height: 26px;
-    margin-bottom: 10px;
-    background: #f8f8f8;
+.avatar {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
     overflow: hidden;
 }
 
-.progress-fill {
-    width: 40%;
-    background: #d7dcec;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    padding-left: 10px;
-    font-size: 12px;
-    color: #333;
-    flex-shrink: 0;
-}
-
-.progress-text {
-    flex: 1;
-    text-align: right;
-    padding-right: 10px;
-    font-size: 12px;
-    color: #555;
-}
-
-.video-title {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 8px;
-}
-
-.video-text {
-    font-size: 13px;
-    color: #555;
-}
-
-.button-block {
-    width: 120px;
-    flex-shrink: 0;
-}
-
-.button-block button {
+.avatar img {
     width: 100%;
-    padding: 10px;
-    background: #5d6fae;
-    color: white;
-    border: none;
-    font-weight: bold;
-    cursor: pointer;
+    height: 100%;
+    object-fit: cover;
 }
 
-.button-block button:hover {
-    background: #4b5d96;
+.text {
+    display: flex;
+    gap: 60px;
+}
+
+.item span {
+    color: #8ecaca;
+    font-size: 14px;
+}
+
+.item {
+    font-size: 18px;
 }
 
 @media (max-width: 600px) {
-    .upload-box {
+
+    .container {
+        padding: 25px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    .info {
         flex-direction: column;
-        align-items: stretch;
+        align-items: flex-start;
     }
 
-    .image-block,
-    .button-block {
-        width: 100%;
+    .text {
+        flex-direction: column;
+        gap: 15px;
     }
 
-    .image-block {
-        height: 140px;
-    }
-
-    .image-block img {
-        width: 90px;
-        height: 90px;
-    }
-
-    .video-title {
-        font-size: 20px;
+    .item {
+        font-size: 16px;
     }
 }
 </style>
 </head>
+
 <body>
 
-<div class="upload-box">
+<div class="container">
 
-    <div class="image-block">
-        <img src="https://static.vecteezy.com/system/resources/previews/010/754/321/original/loading-icon-logo-design-template-illustration-free-vector.jpg" alt="loadin">
-    </div>
+    <h1>
+        The Difference Between<br>
+        Responsive and<br>
+        Adaptive Design
+    </h1>
 
-    <div class="info-block">
-        <div class="progress-row">
-            <div class="progress-fill">UPLOADING 40%</div>
-            <div class="progress-text">About 23 minutes remaining</div>
+    <div class="info">
+        <div class="avatar">
+            <img src="https://www.shutterstock.com/image-vector/user-profile-icon-vector-avatar-600nw-2558760599.jpg">
         </div>
 
-        <div class="video-title">Title of video</div>
-        <div class="video-text">
-            Your video is still loading
-        </div>
-    </div>
+        <div class="text">
+            <div class="item">
+                <span>Author</span><br>
+                Geoff Graham
+            </div>
 
-    <div class="button-block">
-        <button>DONE</button>
+            <div class="item">
+                <span>49 Comments</span><br>
+                Go to comments
+            </div>
+
+            <div class="item">
+                <span>Published</span><br>
+                Nov 11, 2018
+            </div>
+
+            <div class="item">
+                <span>Updated</span><br>
+                Nov 17, 2018
+            </div>
+        </div>
     </div>
 
 </div>
