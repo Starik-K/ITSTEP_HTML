@@ -1,162 +1,223 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-<meta charset="UTF-8">
-<title>Вкладки</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NCEWUNWRUICNICNRW</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-<style>
-body {
-    margin: 0;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      padding: 30px;
+    }
 
-.container {
-    display: flex;
-    height: 100vh;
-}
+    .tabs-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      background: #555;
+      padding: 20px;
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+    }
 
-.tabs {
-    width: 200px;
-    background: #777;
-    display: flex;
-    flex-direction: column;
-}
+    input[type="radio"] {
+      display: none;
+    }
 
-.tab {
-    padding: 15px;
-    color: white;
-    cursor: pointer;
-    border-bottom: 1px solid #666;
-    transition: 0.3s;
-}
 
-.tab:hover {
-    background: #555;
-}
-.tab.active {
-    background: #333;
-}
-.content {
-    flex: 1;
-    background: #555;
-    padding: 20px;
-}
+    .tabs-menu {
+      width: 90px;
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
 
-.blocks {
-    display: flex;
-    gap: 20px;
-}
+    .tabs-menu label {
+      display: block;
+      padding: 12px 10px;
+      background: #8c8c8c;
+      color: white;
+      cursor: pointer;
+      text-align: left;
+      transition: 0.3s;
+      font-size: 14px;
+    }
 
-.block {
-    background: #666;
-    padding: 10px;
-    width: 100%;
-    color: white;
-}
+    .tabs-menu label:hover {
+      background: #666;
+    }
+    #tab1:checked ~ .tabs-menu label[for="tab1"],
+    #tab2:checked ~ .tabs-menu label[for="tab2"],
+    #tab3:checked ~ .tabs-menu label[for="tab3"] {
+      background: #444;
+    }
 
-.block img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-}
+    .tabs-content {
+      flex: 1;
+      min-width: 0;
+    }
 
-.block h3 {
-    margin: 10px 0 5px;
-}
-</style>
+    .tab-content {
+      display: none;
+    }
 
+    #tab1:checked ~ .tabs-content .content1,
+    #tab2:checked ~ .tabs-content .content2,
+    #tab3:checked ~ .tabs-content .content3 {
+      display: flex;
+      gap: 20px;
+    }
+    .card {
+      flex: 1;
+      background: #555;
+      color: white;
+    }
+
+    .img-box {
+      width: 100%;
+      aspect-ratio: 350 / 220;
+      background: #d9d9d9;
+      color: #777;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      margin-bottom: 12px;
+    }
+
+    .card h3 {
+      margin: 0 0 10px;
+      font-size: 16px;
+    }
+
+    .card p {
+      margin: 0;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+    .tab-content {
+      overflow-x: auto;
+    }
+
+    .tab-content-inner {
+      display: flex;
+      gap: 20px;
+      min-width: 0;
+    }
+  </style>
 </head>
 <body>
 
-<div class="container">
+  <div class="tabs-container">
+    <input type="radio" name="tabs" id="tab1" checked>
+    <input type="radio" name="tabs" id="tab2">
+    <input type="radio" name="tabs" id="tab3">
 
-    <div class="tabs">
-        <div class="tab active" onclick="openTab(0)">Tab 1</div>
-        <div class="tab" onclick="openTab(1)">Tab 2</div>
-        <div class="tab" onclick="openTab(2)">Tab 3</div>
+    <div class="tabs-menu">
+      <label for="tab1">Tab 1</label>
+      <label for="tab2">Tab 2</label>
+      <label for="tab3">Tab 3</label>
     </div>
+    <div class="tabs-content">
+      <div class="tab-content content1">
+        <div class="tab-content-inner">
+          <div class="card">
+            <div class="img-box"><img src="https://cdn-icons-png.flaticon.com/512/4794/4794936.png"></div>
+            <h3>Header 1</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              In ultrices lorem id consectetur tempus. Mauris tempus.
+              Nunc id justo iaculis, faucibus tortor non, blandit tortor.
+            </p>
+          </div>
 
-    <div class="content">
-        <div class="tab-content">
-            <div class="blocks">
-                <div class="block">
-                    <img src="https://cdn.paleo.gg/games/jwe2/images/dino/spinosaurus.png">
-                    <h3>carni</h3>
-                    <p>apex</p>
-                </div>
+          <div class="card">
+            <div class="img-box"><img src="https://cdn-icons-png.flaticon.com/512/4794/4794936.png"></div>
+            <h3>Header 2</h3>
+            <p>
+              Quisque id lectus et ipsum bibendum mattis vitae sagittis magna.
+              Aenean accumsan turpis gravida feugiat molestie.
+              Aliquam ornare nulla a velit vehicula.
+            </p>
+          </div>
 
-                <div class="block">
-                    <img src="https://cdn.paleo.gg/games/jwe2/images/dino/acrocanthosaurus.png">
-                    <h3>carni</h3>
-                    <p>apex.</p>
-                </div>
-
-                <div class="block">
-                    <img src="https://cdn.paleo.gg/games/jwe2/images/dino/australovenator.png">
-                    <h3>carni</h3>
-                    <p>apex</p>
-                </div>
-            </div>
+          <div class="card">
+            <div class="img-box"><img src="https://cdn-icons-png.flaticon.com/512/4794/4794936.png"></div>
+            <h3>Header 3</h3>
+            <p>
+              Mauris nec purus nec ligula euismod convallis.
+              Vivamus ac tortor vel viverra tristique.
+              Curabitur suscipit sit non mattis volutpat.
+            </p>
+          </div>
         </div>
-        <div class="tab-content" style="display:none;">
-            <div class="blocks">
-                <div class="block">
-                    <img src="https://cdn.paleo.gg/games/jwe2/images/dino/alamosaurus.png">
-                    <h3>Tab 2 - 1</h3>
-                    <p>2-1</p>
-                </div>
+      </div>
 
-                <div class="block">
-                    <img src="https://cdn.paleo.gg/games/jwe2/images/dino/apatosaurus.png">
-                    <h3>Tab 2 - 2</h3>
-                    <p>2-2</p>
-                </div>
+      <div class="tab-content content2">
+        <div class="tab-content-inner">
+          <div class="card">
+            <div class="img-box"><img src="https://cdn-icons-png.flaticon.com/512/4794/4794936.png"></div>
+            <h3>Header 1</h3>
+            <p>
+            lbelblleblelblbelleb
+            </p>
+          </div>
 
-                <div class="block">
-                    <img src="https://cdn.paleo.gg/games/jwe2/images/dino/ankylodocus.png">
-                    <h3>Tab 2 - 3</h3>
-                    <p>2-3</p>
-                </div>
-            </div>
+          <div class="card">
+            <div class="img-box"><img src="https://cdn-icons-png.flaticon.com/512/4794/4794936.png"></div>
+            <h3>Header 2</h3>
+            <p>
+            lbelblleblelblbelleb
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="img-box"><img src="https://cdn-icons-png.flaticon.com/512/4794/4794936.png"></div>
+            <h3>Header 3</h3>
+            <p>
+            lbelblleblelblbelleb
+            </p>
+          </div>
         </div>
+      </div>
 
-        <div class="tab-content" style="display:none;">
-            <div class="blocks">
-                <div class="block">
-                    <img src="https://cdn.paleo.gg/games/jwe2/images/dino/camarasaurus.png">
-                    <h3>Tab 3 - 1</h3>
-                    <p>3-1</p>
-                </div>
+      <div class="tab-content content3">
+        <div class="tab-content-inner">
+          <div class="card">
+            <div class="img-box"><img src="https://cdn-icons-png.flaticon.com/512/4794/4794936.png"></div>
+            <h3>Header 1</h3>
+            <p>
+            lbelblleblelblbelleb
+            </p>
+          </div>
 
-                <div class="block">
-                    <img src="https://cdn.paleo.gg/games/jwe2/images/dino/amargasaurus.png">
-                    <h3>Tab 3 - 2</h3>
-                    <p>3-2</p>
-                </div>
+          <div class="card">
+            <div class="img-box"><img src="https://cdn-icons-png.flaticon.com/512/4794/4794936.png"></div>
+            <h3>Header 2</h3>
+            <p>
+            lbelblleblelblbelleb
+            </p>
+          </div>
 
-                <div class="block">
-                    <img src="https://cdn.paleo.gg/games/jwe2/images/dino/deinocheirus.png">
-                    <h3>Tab 3 - 3</h3>
-                    <p>3-3</p>
-                </div>
-            </div>
+          <div class="card">
+            <div class="img-box"><img src="https://cdn-icons-png.flaticon.com/512/4794/4794936.png"></div>
+            <h3>Header 3</h3>
+            <p>
+            lbelblleblelblbelleb
+            </p>
+          </div>
         </div>
+      </div>
 
     </div>
-</div>
-
-<script>
-function openTab(index) {
-    let tabs = document.querySelectorAll(".tab");
-    let contents = document.querySelectorAll(".tab-content");
-
-    tabs.forEach(tab => tab.classList.remove("active"));
-    contents.forEach(c => c.style.display = "none");
-
-    tabs[index].classList.add("active");
-    contents[index].style.display = "block";
-}
-</script>
+  </div>
 
 </body>
 </html>
