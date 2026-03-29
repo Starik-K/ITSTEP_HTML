@@ -3,139 +3,161 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>jidncwjibncwiucnw</title>
+<title>dzdzdzzdzdzdzd</title>
 
 <style>
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 body {
-    background: #f5f5f5;
+    background: #f2f2f2;
     padding: 20px;
 }
 
-.article {
-    background: #0d4d4b;
-    color: white;
-    padding: 40px;
+.upload-box {
     max-width: 900px;
+    margin: 0 auto;
+    background: white;
+    border: 2px solid #ddd;
+    padding: 15px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-.breadcrumbs {
-    color: #b5d1cf;
-    margin-bottom: 20px;
-}
-
-.title {
-    font-size: 36px;
-    font-weight: bold;
-    margin-bottom: 30px;
-}
-
-.info {
+.image-block {
+    width: 180px;
+    height: 100px;
+    background: #d9d9d9;
+    flex-shrink: 0;
     display: flex;
     align-items: center;
-    gap: 30px;
+    justify-content: center;
 }
 
-.avatar {
+.image-block img {
     width: 70px;
     height: 70px;
-    border-radius: 50%;
-    background: #ddd;
+    object-fit: contain;
+}
+
+.info-block {
+    flex: 1;
+}
+
+.progress-row {
+    display: flex;
+    align-items: center;
+    border: 1px solid #b8bfd6;
+    height: 26px;
+    margin-bottom: 10px;
+    background: #f8f8f8;
     overflow: hidden;
 }
 
-.avatar img {
-    width: 100%;
+.progress-fill {
+    width: 40%;
+    background: #d7dcec;
     height: 100%;
-    object-fit: cover;
-}
-
-.meta {
     display: flex;
-    gap: 40px;
-    flex-wrap: wrap;
-}
-
-.meta div {
-    font-size: 14px;
-}
-
-.meta span {
-    display: block;
-    color: #9bc7c4;
+    align-items: center;
+    padding-left: 10px;
     font-size: 12px;
+    color: #333;
+    flex-shrink: 0;
 }
 
-/* 📱 Адаптив */
+.progress-text {
+    flex: 1;
+    text-align: right;
+    padding-right: 10px;
+    font-size: 12px;
+    color: #555;
+}
+
+.video-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.video-text {
+    font-size: 13px;
+    color: #555;
+}
+
+.button-block {
+    width: 120px;
+    flex-shrink: 0;
+}
+
+.button-block button {
+    width: 100%;
+    padding: 10px;
+    background: #5d6fae;
+    color: white;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.button-block button:hover {
+    background: #4b5d96;
+}
+
 @media (max-width: 600px) {
-    .article {
-        padding: 20px;
-    }
-
-    .title {
-        font-size: 24px;
-    }
-
-    .info {
+    .upload-box {
         flex-direction: column;
-        align-items: flex-start;
-        gap: 20px;
+        align-items: stretch;
     }
 
-    .meta {
-        flex-direction: column;
-        gap: 10px;
+    .image-block,
+    .button-block {
+        width: 100%;
+    }
+
+    .image-block {
+        height: 140px;
+    }
+
+    .image-block img {
+        width: 90px;
+        height: 90px;
+    }
+
+    .video-title {
+        font-size: 20px;
     }
 }
 </style>
 </head>
-
 <body>
 
-<div class="article">
-    
-    <div class="breadcrumbs">
-        Home / Articles /
+<div class="upload-box">
+
+    <div class="image-block">
+        <img src="https://static.vecteezy.com/system/resources/previews/010/754/321/original/loading-icon-logo-design-template-illustration-free-vector.jpg" alt="loadin">
     </div>
 
-    <div class="title">
-        The Difference Between Responsive and Adaptive Design
+    <div class="info-block">
+        <div class="progress-row">
+            <div class="progress-fill">UPLOADING 40%</div>
+            <div class="progress-text">About 23 minutes remaining</div>
+        </div>
+
+        <div class="video-title">Title of video</div>
+        <div class="video-text">
+            Your video is still loading
+        </div>
     </div>
 
-    <div class="info">
-        
-        <div class="avatar">
-<img src="https://cdn-icons-png.flaticon.com/512/4794/4794936.png">
-        </div>
-
-        <div class="meta">
-            <div>
-                <span>Author</span>
-                Geoff Graham
-            </div>
-
-            <div>
-                <span>49 Comments</span>
-                Go to comments
-            </div>
-
-            <div>
-                <span>Published</span>
-                Nov 11, 2018
-            </div>
-
-            <div>
-                <span>Updated</span>
-                Nov 17, 2018
-            </div>
-        </div>
-
+    <div class="button-block">
+        <button>DONE</button>
     </div>
 
 </div>
