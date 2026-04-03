@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>aaa3</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial;
+    background: #f5f5f5;
+}
+.header {
+    background: #1e4f7a;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+.search {
+    background: white;
+    padding: 15px;
+    margin: 20px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.search input, .search select {
+    padding: 8px;
+}
+
+.search button {
+    background: #1e4f7a;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+}
+.main {
+    display: flex;
+    margin: 20px;
+    gap: 20px;
+}
+.filter {
+    width: 250px;
+    background: white;
+    padding: 15px;
+}
+
+.flights {
+    flex: 1;
+    background: white;
+    padding: 15px;
+}
+.flight {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+}
+
+.flight button {
+    background: #1e4f7a;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+}
+</style>
+
+</head>
+<body>
+
+<div class="header">
+    <div>Flights - Search List</div>
+    <div>Home / Flights</div>
+</div>
+
+<div class="search">
+    <input type="text" placeholder="From">
+    <input type="text" placeholder="To">
+    <input type="date">
+    <input type="date">
+    <select>
+        <option>Econom</option>
+        <option>Business</option>
+    </select>
+    <button>Search</button>
+</div>
+
+<div class="main">
+    <div class="filter">
+        <h3>Filter</h3>
+
+        <p>Stops</p>
+        <label><input type="checkbox"> Non-stop</label><br>
+        <label><input type="checkbox"> 1 stop</label><br>
+        <label><input type="checkbox"> 2+ stops</label>
+
+        <p>Price</p>
+        <input type="number" placeholder="Min">
+        <input type="number" placeholder="Max">
+
+        <p>Airlines</p>
+        <label><input type="checkbox"> Air India</label><br>
+        <label><input type="checkbox"> IndiGo</label><br>
+        <label><input type="checkbox"> Emirates</label>
+    </div>
+    <div class="flights">
+        <h3>Delhi to Sydney</h3>
+
+        <div class="flight">
+            <div>IndiGo</div>
+            <div>23:30</div>
+            <div>18h 55m</div>
+            <div>18:15</div>
+            <div>$980</div>
+            <button>Book</button>
+        </div>
+
+        <div class="flight">
+            <div>Air India</div>
+            <div>10:00</div>
+            <div>15h</div>
+            <div>22:00</div>
+            <div>$850</div>
+            <button>Book</button>
+        </div>
+
+        <div class="flight">
+            <div>Emirates</div>
+            <div>05:00</div>
+            <div>20h</div>
+            <div>18:00</div>
+            <div>$1100</div>
+            <button>Book</button>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
