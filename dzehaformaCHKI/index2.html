@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<title>gorlokokok2</title>
+n
+<style>
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #eee;
+}
+
+.container {
+    width: 600px;
+    margin: 40px auto;
+    background: #ddd;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.input {
+    padding: 8px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.input.valid {
+    border-color: green;
+}
+
+.input.invalid {
+    border-color: red;
+}
+
+.btn {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.green {
+    background: #4CAF50;
+}
+
+.green:hover {
+    background: #45a049;
+}
+
+.red {
+    background: #e74c3c;
+}
+
+.red:hover {
+    background: #c0392b;
+}
+
+.disabled {
+    background: gray;
+    cursor: not-allowed;
+}
+
+.circle {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+    <h2>Inputs</h2>
+    <input type="text" class="input" placeholder="Enter some text">
+    <input type="text" class="input valid" value="valid text">
+    <input type="text" class="input invalid" value="invalid text">
+
+    <h2>Check boxes</h2>
+    <label>
+        <input type="checkbox" checked> Subscribe
+    </label>
+    <label>
+        <input type="checkbox"> Subscribe
+    </label>
+
+    <h2>Radio buttons</h2>
+    <label>
+        <input type="radio" name="gender" checked> Male
+    </label>
+    <label>
+        <input type="radio" name="gender"> Female
+    </label>
+
+    <h2>Buttons</h2>
+    <button class="btn green">Active</button>
+    <button class="btn green">Hover</button>
+    <button class="btn red">Danger</button>
+    <button class="btn red">Haver</button>
+    <button class="btn disabled" disabled>Disabled</button>
+
+    <button class="circle green">+</button>
+    <button class="circle red">-</button>
+
+    <h2>Text area</h2>
+    <textarea class="textarea" placeholder="enter text here"></textarea>
+
+</div>
+
+</body>
+</html>
