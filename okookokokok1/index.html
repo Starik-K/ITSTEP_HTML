@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ыыээыэыыч</title>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: hsl(221, 100%, 96%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.card {
+    display: flex;
+    max-width: 740px;
+    width: 100%;
+    border-radius: 30px;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.1);
+}
+
+.left {
+    flex: 1;
+    padding: 40px;
+    text-align: center;
+    color: white;
+    background: linear-gradient(
+        180deg,
+        hsl(252, 100%, 67%),
+        hsl(241, 81%, 54%)
+    );
+}
+
+.left .title {
+    opacity: 0.8;
+    margin-bottom: 30px;
+}
+
+.circle {
+    width: 160px;
+    height: 160px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    background: linear-gradient(
+        180deg,
+        hsla(256, 72%, 46%, 1),
+        hsla(241, 72%, 46%, 0)
+    );
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.score {
+    font-size: 56px;
+    font-weight: 800;
+}
+
+.of {
+    opacity: 0.6;
+    font-size: 14px;
+}
+
+.left h2 {
+    margin: 10px 0;
+    font-weight: 700;
+}
+
+.desc {
+    font-size: 14px;
+    opacity: 0.75;
+}
+
+.right {
+    flex: 1;
+    padding: 40px;
+}
+
+.right h3 {
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    padding: 14px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+.red {
+    background: hsla(0, 100%, 67%, 0.08);
+    color: hsl(0, 100%, 67%);
+}
+
+.yellow {
+    background: hsla(39, 100%, 56%, 0.08);
+    color: hsl(39, 100%, 56%);
+}
+
+.green {
+    background: hsla(166, 100%, 37%, 0.08);
+    color: hsl(166, 100%, 37%);
+}
+
+.blue {
+    background: hsla(234, 85%, 45%, 0.08);
+    color: hsl(234, 85%, 45%);
+}
+
+/* КНОПКА */
+button {
+    width: 100%;
+    padding: 16px;
+    border-radius: 30px;
+    border: none;
+    background: hsl(224, 30%, 27%); /* серо-синий */
+    color: white;
+    font-size: 16px;
+    margin-top: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #22c55e;
+}
+
+/* 📱 АДАПТИВ */
+@media (max-width: 650px) {
+    .card {
+        flex-direction: column;
+        border-radius: 0;
+    }
+
+    .left {
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+    }
+
+    .circle {
+        width: 130px;
+        height: 130px;
+    }
+
+    .score {
+        font-size: 42px;
+    }
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="card">
+
+```
+<div class="left">
+    <div class="title">Your Result</div>
+
+    <div class="circle">
+        <div class="score">76</div>
+        <div class="of">of 100</div>
+    </div>
+
+    <h2>Great</h2>
+
+    <div class="desc">
+        You scored higher than 65% of the people who have taken these tests.
+    </div>
+</div>
+
+<div class="right">
+    <h3>Summary</h3>
+
+    <div class="item red">
+        Reaction <span>80 / 100</span>
+    </div>
+
+    <div class="item yellow">
+        Memory <span>92 / 100</span>
+    </div>
+
+    <div class="item green">
+        Verbal <span>61 / 100</span>
+    </div>
+
+    <div class="item blue">
+        Visual <span>73 / 100</span>
+    </div>
+
+    <button>Continue</button>
+</div>
+```
+
+</div>
+
+</body>
+</html>
