@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>22</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background: #e9ecef;
+    color: #333;
+}
+
+.container {
+    display: flex;
+    max-width: 1100px;
+    margin: 40px auto;
+    gap: 25px;
+}
+
+.article {
+    flex: 3;
+}
+
+.article h1 {
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.article h2 {
+    margin-top: 25px;
+}
+
+.article p {
+    line-height: 1.6;
+    color: #555;
+}
+
+.sidebar {
+    flex: 1;
+}
+
+.card {
+    background: #d8dee9;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.card-header {
+    background: #3b4a5a;
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.card ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.card li {
+    padding: 10px;
+    border-top: 1px solid #c5ccd6;
+}
+
+@media (max-width: 800px) {
+    .container {
+        flex-direction: column;
+        margin: 20px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="article">
+        <h1>Introduction</h1>
+        <p>
+        Aenean dictum elit sapien, et tempor leo malesuada eget. Praesent sed metus laoreet lacus suscipit auctor in id turpis. Nullam a sapien quis urna tincidunt hendrerit. Nulla consectetur varius diam, et tincidunt velit ullamcorper ac. Sed rhoncus tempus tortor, at ornare nisi gravida at.
+        </p>
+
+        <h2>Additional information</h2>
+        <p>
+        Duis sed pharetra odio. Donec luctus posuere nibh, eget posuere nisl varius vel. Maecenas urna ante, facilisis id libero ut, vestibulum tristique lacus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.
+        </p>
+
+        <p>
+        Aenean non placerat eros. Aliquam consequat quis lorem non vulputate. Mauris urna magna, porttitor eget posuere nec, dictum at mi.
+        </p>
+    </div>
+
+    <div class="sidebar">
+
+        <div class="card">
+            <div class="card-header">Actions</div>
+            <ul>
+                <li>Integer ut magna cursus eros</li>
+                <li>Fusce imperdiet sapien a sem</li>
+                <li>Sed ac ligula in neque tincidunt</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <div class="card-header">Plans</div>
+            <ul>
+                <li>Morbi at diam suscipit mauris</li>
+                <li>Donec vel odio malesuada</li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

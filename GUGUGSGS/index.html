@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>prt1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #ffffff;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        .header {
+            background: white;
+            padding: 15px 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 20px;
+        }
+
+        .search-box {
+            background: #e9f0fb;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .category {
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .category:hover {
+            background: #eef3ff;
+        }
+
+        .category img {
+            width: 40px;
+            height: 40px;
+            margin-bottom: 10px;
+        }
+
+        .category-title {
+            font-size: 14px;
+            font-weight: 500;
+            color: #333;
+        }
+
+        .footer {
+            background: white;
+            padding: 30px 0;
+            margin-top: 40px;
+            border-top: 1px solid #ddd;
+        }
+
+        .footer a {
+            display: block;
+            color: #6c757d;
+            text-decoration: none;
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+
+        .footer a:hover {
+            color: #0d6efd;
+        }
+
+        .btn-custom {
+            background-color: #4e73df;
+            color: white;
+        }
+
+        .btn-custom:hover {
+            background-color: #2e59d9;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <div class="container d-flex justify-content-between align-items-center">
+        <div class="logo">Ad's BOARD</div>
+
+        <div>
+            <a href="#" class="btn btn-warning me-2">+ New ad</a>
+            <a href="#" class="btn btn-light">My profile</a>
+        </div>
+    </div>
+</div>
+<div class="container mt-4">
+    <div class="search-box">
+        <div class="row g-2">
+            <div class="col-md-5">
+                <input type="text" class="form-control" placeholder="Що шукаєте?">
+            </div>
+            <div class="col-md-5">
+                <input type="text" class="form-control" placeholder="Місто або район;>">
+            </div>
+            <div class="col-md-2">
+                <button class="btn btn-custom w-100">Search</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container mt-5">
+    <div class="row">
+
+        <div class="col-6 col-md-3">
+            <a href="gokgokgok" class="category d-block">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlloBaSqBBy7_WQAjqDdOJ6elKCSmSFgdSjA&s" alt="">
+                <div class="category-title">Дитячий світ</div>
+            </a>
+        </div>
+
+        <div class="col-6 col-md-3">
+            <a href="gokgokgok" class="category d-block">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVXvqvaJ54ju37CUpTXtP4dvLA-HeA_CGMtQ&s" alt="">
+                <div class="category-title">Нерухомість</div>
+            </a>
+        </div>
+
+        <div class="col-6 col-md-3">
+            <a href="gokgokgok" class="category d-block">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5WRBy4D-l5_4zgQw36N6t2K6bW1t6rT2H-g&s" alt="">
+                <div class="category-title">Транспорт</div>
+            </a>
+        </div>
+        <div class="col-6 col-md-3">
+            <a href="gokgokgok" class="category d-block">
+                <img src="https://kwitka.ua/image/data/filemanager/tn3_0_08300700_1520210988.jpg" alt="">
+                <div class="category-title">Запчастини</div>
+            </a>
+        </div>
+
+        <div class="col-6 col-md-3">
+            <a href="gokgokgok" class="category d-block">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTK0jOvn8zaJ5GR04IYAzWn4LS0joZWyJZvSg&s" alt="">
+                <div class="category-title">Робота</div>
+            </a>
+        </div>
+
+        <div class="col-6 col-md-3">
+            <a href="gokgokgok" class="category d-block">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSE7qjXvzX0T--7cCogC6yAB8YCjjlbP2ROow&s" alt="">
+                <div class="category-title">Тварини</div>
+            </a>
+        </div>
+
+        <div class="col-6 col-md-3">
+            <a href="gokgokgok" class="category d-block">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSH5neiCCWJeR2uJXhzexO8nPrHI4JdgKih5A&s" alt="">
+                <div class="category-title">Дім і сад</div>
+            </a>
+        </div>
+
+        <div class="col-6 col-md-3">
+            <a href="gokgokgok" class="category d-block">
+                <img src="https://rw6ase.narod.ru/index1/mag_ml/mg_kat_set/elektronika_ta1_003.jpg" alt="">
+                <div class="category-title">Електроніка</div>
+            </a>
+        </div>
+
+        <div class="col-6 col-md-3">
+            <a href="#" class="category d-block">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyMYxrwurGc5vTr7uc57KdulAUhunG9lczgQ&s" alt="">
+                <div class="category-title">Послуги</div>
+            </a>
+        </div>
+
+        <div class="col-6 col-md-3">
+            <a href="gokgokgok" class="category d-block">
+                <img src="https://img.joomcdn.net/43ff21d8403df795b6b63b6d78eb2219484e289d_original.jpeg" alt="">
+                <div class="category-title">Одяг</div>
+            </a>
+        </div>
+
+        <div class="col-6 col-md-3">
+            <a href="gokgokgok" class="category d-block">
+                <img src="https://naurok-test.nyc3.cdn.digitaloceanspaces.com/365644/images/173894_1584973854.jpg" alt="">
+                <div class="category-title">Хобі та спорт</div>
+            </a>
+        </div>
+
+        <div class="col-6 col-md-3">
+            <a href="gokgokgok" class="category d-block">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiQfJ7eGWpxMLObqxNK_xhK29wolTVZHaJ4g&s" alt="">
+                <div class="category-title">Подарунки</div>
+            </a>
+        </div>
+
+    </div>
+</div>
+<div class="footer">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-4">
+                <a href="#">Мобільні додатки</a>
+                <a href="#">Платні сервіси</a>
+                <a href="#">Реклама</a>
+            </div>
+
+            <div class="col-md-4">
+                <a href="#">Правила безпеки</a>
+                <a href="#">Як продавати</a>
+                <a href="#">Умови користування</a>
+            </div>
+
+            <div class="col-md-4">
+                <a href="#">Популярні пошуки</a>
+                <a href="#">Карта сайту</a>
+                <a href="#">Контакти</a>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

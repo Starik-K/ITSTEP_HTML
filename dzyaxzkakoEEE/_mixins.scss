@@ -1,0 +1,12 @@
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+@mixin glass {
+  background: rgba(252, 78, 78, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+}

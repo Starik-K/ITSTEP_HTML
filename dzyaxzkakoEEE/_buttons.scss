@@ -1,0 +1,43 @@
+.btn {
+  padding: 10px 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  min-width: 90px;
+  text-align: center;
+  transition: 0.2s;
+
+  &:active {
+    transform: scale(0.97);
+  }
+}
+
+.btn-buy {
+  @extend .btn;
+  background: $success;
+
+  &:hover {
+    background: darken($success, 10%);
+  }
+}
+
+.btn-cancel {
+  @extend .btn;
+  background: $danger;
+
+  &:hover {
+    background: darken($danger, 10%);
+  }
+}
+
+.btn-info {
+  @extend .btn;
+  background: $primary;
+
+  &:hover {
+    background: darken($primary, 10%);
+  }
+}

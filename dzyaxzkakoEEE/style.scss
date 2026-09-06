@@ -1,0 +1,28 @@
+@import 'variables';
+@import 'mixins';
+@import 'buttons';
+@import 'cards';
+
+body {
+  margin: 0;
+  font-family: $font-main;
+  background: linear-gradient(135deg, #f0f2f5, #e4e7ec);
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 30px;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 30px;
+}
+
+.products {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  flex-wrap: wrap;
+}

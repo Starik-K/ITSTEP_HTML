@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>aaa2</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: url("https://onehome.org.uk/wp-content/uploads/2021/06/Ocean.jpg");
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form-box {
+    width: 500px;
+    padding: 30px;
+    background: rgba(0,0,0,0.4); /* прозрачность */
+    color: white;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+}
+h2 {
+    margin-bottom: 20px;
+}
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: none;
+    outline: none;
+}
+.row {
+    display: flex;
+    gap: 10px;
+}
+
+.row input {
+    width: 100%;
+}
+
+/* Кнопка */
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    cursor: pointer;
+}
+</style>
+
+</head>
+<body>
+
+<div class="form-box">
+    <h2>Contact form</h2>
+
+    <form>
+        <div class="row">
+            <input type="text" placeholder="First name">
+            <input type="text" placeholder="Last name">
+        </div>
+
+        <input type="email" placeholder="Email">
+        
+        <div class="row">
+            <input type="text" placeholder="Phone">
+            <input type="text" placeholder="Phone">
+            <input type="text" placeholder="Phone">
+        </div>
+
+        <select>
+            <option>Subject</option>
+            <option>Help</option>
+            <option>Support</option>
+        </select>
+
+        <textarea rows="4" placeholder="Message"></textarea>
+
+        <button>SUBMIT FORM</button>
+    </form>
+</div>
+
+</body>
+</html>

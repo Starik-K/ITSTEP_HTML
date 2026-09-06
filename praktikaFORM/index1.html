@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>aaa1</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background: #e25b43;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+}
+
+.card {
+    background: #eee;
+    padding: 40px 30px;
+    width: 300px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    position: relative;
+}
+
+.avatar {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    position: absolute;
+    top: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 4px solid #eee;
+    overflow: hidden; /* важно */
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+h2 {
+    margin-top: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    background: #ddd;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: #2e944b;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+a {
+    display: block;
+    margin-top: 10px;
+    color: red;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.social {
+    margin-top: 20px;
+}
+
+.social button {
+    width: 45%;
+    margin: 5px;
+}
+
+.fb {
+    background: #3b5998;
+}
+
+.tw {
+    background: #1da1f2;
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+    <div class="card">
+        
+        <div class="avatar">
+            <img src="https://cdn-icons-png.flaticon.com/512/4792/4792944.png" alt="pfp">
+        </div>
+
+        <h2>Member Login</h2>
+
+        <input type="text" placeholder="Username">
+        <input type="password" placeholder="Password">
+
+        <button>Login</button>
+
+        <a href="#">Forgot password?</a>
+    </div>
+
+    <div class="social">
+        <p style="color:white;">or ask for help ur big mom</p>
+        <button class="fb">Facebook</button>
+        <button class="tw">Twitter</button>
+    </div>
+</div>
+
+</body>
+</html>

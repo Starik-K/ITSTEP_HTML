@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>gokgokgok1</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    body {
+      margin: 0;
+      background: #76b2e7;
+      padding: 30px;
+    }
+
+    .card-form {
+      max-width: 760px;
+      margin: 0 auto;
+      background: #6182c5;
+      border-radius: 10px;
+      padding: 30px;
+    }
+
+    .title {
+      background: #05026a;
+      color: white;
+      padding: 12px 20px;
+      font-weight: bold;
+      text-transform: uppercase;
+      width: fit-content;
+      min-width: 260px;
+      margin-bottom: 25px;
+    }
+
+    .card-content {
+      display: flex;
+      gap: 30px;
+      align-items: flex-end;
+    }
+
+    .form-side {
+      flex: 1;
+    }
+
+    .photo-side {
+      width: 220px;
+      flex-shrink: 0;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+    }
+
+    .photo-side img {
+      width: 100%;
+      max-width: 220px;
+      height: auto;
+      display: block;
+      object-fit: contain;
+    }
+
+    .form-row {
+      margin-bottom: 18px;
+    }
+
+    label {
+      display: block;
+      font-size: 12px;
+      color: #4b6666;
+      margin-bottom: 6px;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-bottom: 2px solid #9db8b8;
+      background: #c7e2e2;
+      outline: none;
+      font-size: 14px;
+    }
+
+    .small-row {
+      display: flex;
+      gap: 15px;
+    }
+
+    .small-row .field {
+      flex: 1;
+    }
+
+    @media (max-width: 700px) {
+      .card-form {
+        padding: 20px;
+      }
+
+      .card-content {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .photo-side {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .photo-side img {
+        max-width: 180px;
+      }
+
+      .small-row {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card-form">
+    <div class="title">creditnie detalki</div>
+
+    <div class="card-content">
+      <div class="form-side">
+        <div class="form-row">
+          <label>Card Number</label>
+          <input type="text" placeholder="1234 5678 9012 3456">
+        </div>
+
+        <div class="form-row">
+          <label>Name On Card</label>
+          <input type="text" placeholder="Name Surname">
+        </div>
+
+        <div class="small-row">
+          <div class="field">
+            <label>Expire Date</label>
+            <input type="text" placeholder="02 / 2017">
+          </div>
+
+          <div class="field">
+            <label>CSV Noah</label>
+            <input type="text" placeholder="***">
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-side">
+        <img src="https://avatanplus.com/files/resources/original/5745c2a126344154e8804584.png" alt="фоточко">
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

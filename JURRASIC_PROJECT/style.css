@@ -1,0 +1,265 @@
+body {
+    margin: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    background: black;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.main-img {
+    display: block;
+    margin: 20px auto;
+    max-width: 700px;
+    width: 100%;
+    border-radius: 12px;
+}
+
+.fade-in {
+    animation: fadeIn 1s ease;
+}
+
+.sidebar {
+    position: fixed;
+    width: 220px;
+    height: 100%;
+    background: #150000;
+    padding-top: 20px;
+    box-shadow: 0 0 20px rgba(255,0,0,0.4);
+    z-index: 1000;
+}
+
+.sidebar a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 15px;
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px solid #270000;
+    transition: 0.3s;
+    font-size: 14px;
+}
+
+.sidebar a img {
+    width: 26px;
+    height: 26px;
+    object-fit: contain;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    background: #a60202;
+}
+
+.sidebar a:hover img {
+    transform: scale(1.2);
+}
+
+.content {
+    margin-left: 220px;
+    padding: 20px;
+    animation: fadeIn 1s ease;
+}
+
+.page-title {
+    text-align: center;
+    font-size: 44px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    margin: 20px 0 10px;
+    color: white;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px red, 0 0 20px red;
+    position: relative;
+    animation: fadeIn 1s ease;
+}
+
+.page-title::after {
+    content: "";
+    display: block;
+    width: 300px;
+    height: 2px;
+    margin: 15px auto;
+    background: linear-gradient(to right, transparent, red, transparent);
+}
+
+.page-subtitle {
+    text-align: center;
+    color: #aaa;
+    margin-bottom: 30px;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+.title {
+    text-align: center;
+    font-size: 42px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-top: 10px;
+    text-shadow: 0 0 15px red;
+    position: relative;
+}
+
+.title::after {
+    content: "";
+    display: block;
+    width: 250px;
+    height: 2px;
+    margin: 12px auto;
+    background: linear-gradient(to right, transparent, red, transparent);
+}
+
+.subtitle {
+    text-align: center;
+    color: #aaa;
+    margin-bottom: 25px;
+}
+
+.card {
+    background: rgba(1, 0, 0, 0.9);
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 12px;
+    border: 1px solid #400000;
+    transition: 0.5s;
+    max-width: 900px;
+    text-align: center;
+}
+
+.card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 25px red;
+}
+
+.card h2 {
+    font-size: 22px;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    position: relative;
+    text-align: center;
+}
+
+.card img {
+    display: block;
+    margin: 0 auto;
+    max-width: 350px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.card img:hover {
+    transform: scale(1.05);
+}
+
+.button {
+    background: #8b0000;
+    padding: 12px 18px;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.button:hover {
+    background: red;
+    box-shadow: 0 0 10px red;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #500000;
+}
+
+th {
+    background: #8b0000;
+}
+
+td, th {
+    padding: 10px;
+    text-align: center;
+}
+
+tr:hover {
+    background: rgba(139,0,0,0.3);
+}
+
+@media (max-width: 768px) {
+    .rex-section {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .sidebar a {
+        flex: 1 1 50%;
+        justify-content: center;
+    }
+
+    .content {
+        margin-left: 0;
+    }
+}
+
+.rex-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.facts {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    max-width: 320px;
+}
+
+.facts details {
+    background: rgba(30,0,0,0.9);
+    border: 1px solid #500000;
+    border-radius: 10px;
+    padding: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 16px;
+}
+
+.facts summary {
+    font-weight: bold;
+    color: #ff4d4d;
+    font-size: 17px;
+}
+
+.facts p {
+    margin-top: 10px;
+    font-size: 15px;
+    color: #ddd;
+}
+
+.rex-section img {
+    max-width: 500px;
+}
