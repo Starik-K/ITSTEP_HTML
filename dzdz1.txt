@@ -1,0 +1,95 @@
+#include <iostream>
+using namespace std;
+
+class Drob
+{
+private:
+    int chislitel;
+    int znamenatel;
+
+public:
+    void vvod()
+    {
+        cout << "введите числитель: ";
+        cin >> chislitel;
+
+        cout << "введите знаменатель: ";
+        cin >> znamenatel;
+    }
+
+    void pokaz()
+    {
+        cout << chislitel << "/" << znamenatel << endl;
+    }
+
+    Drob slozhenie(Drob d)
+    {
+        Drob rezult;
+
+        rezult.chislitel = chislitel * d.znamenatel + d.chislitel * znamenatel;
+        rezult.znamenatel = znamenatel * d.znamenatel;
+
+        return rezult;
+    }
+
+    Drob vychitanie(Drob d)
+    {
+        Drob rezult;
+
+        rezult.chislitel = chislitel * d.znamenatel - d.chislitel * znamenatel;
+        rezult.znamenatel = znamenatel * d.znamenatel;
+
+        return rezult;
+    }
+
+    Drob umnozhenie(Drob d)
+    {
+        Drob rezult;
+
+        rezult.chislitel = chislitel * d.chislitel;
+        rezult.znamenatel = znamenatel * d.znamenatel;
+
+        return rezult;
+    }
+
+    Drob delenie(Drob d)
+    {
+        Drob rezult;
+
+        rezult.chislitel = chislitel * d.znamenatel;
+        rezult.znamenatel = znamenatel * d.chislitel;
+
+        return rezult;
+    }
+};
+
+int main()
+{
+    Drob a, b, c;
+
+    cout << "Pervaya drob:" << endl;
+    a.vvod();
+
+    cout << "Vtoraya drob:" << endl;
+    b.vvod();
+
+    cout << endl;
+
+    cout << "Slozhenie: ";
+    c = a.slozhenie(b);
+    c.pokaz();
+
+    cout << "Vychitanie: ";
+    c = a.vychitanie(b);
+    c.pokaz();
+
+    cout << "Umnozhenie: ";
+    c = a.umnozhenie(b);
+    c.pokaz();
+
+    cout << "Delenie: ";
+    c = a.delenie(b);
+    c.pokaz();
+
+    return 0;
+}
