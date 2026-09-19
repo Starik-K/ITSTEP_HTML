@@ -1,0 +1,299 @@
+#include <iostream>
+#include <string>
+#include <vector>
+#include <fstream>
+#include <cstring>
+using namespace std;
+
+class Abonent
+{
+private:
+    char* pib;
+    string domTelefon;
+    string rabTelefon;
+    string mobTelefon;
+    string dopInfo;
+
+public:
+    Abonent()
+        : pib(nullptr), domTelefon(""), rabTelefon(""), mobTelefon(""), dopInfo("")
+    {
+        setPib("Bez imeni");
+    }
+
+    Abonent(const char* p, string dom, string rab, string mob, string info)
+        : pib(nullptr), domTelefon(dom), rabTelefon(rab), mobTelefon(mob), dopInfo(info)
+    {
+        setPib(p);
+    }
+
+    ~Abonent()
+    {
+        delete[] pib;
+    }
+
+    inline string getPib()
+    {
+        return pib;
+    }
+
+    inline string getMobTelefon()
+    {
+        return mobTelefon;
+    }
+
+    void setPib(const char* p)
+    {
+        delete[] pib;
+
+        pib = new char[strlen(p) + 1];
+        strcpy(pib, p);
+    }
+
+    void vvod()
+    {
+        string p;
+
+        cout << "введите пиб: ";
+        getline(cin, p);
+        setPib(p.c_str());
+
+        cout << "дом. тел: ";
+        getline(cin, domTelefon);
+
+        cout << "рабоч. тел: ";
+        getline(cin, rabTelefon);
+
+        cout << "моб. тел: ";
+        getline(cin, mobTelefon);
+
+        cout << "доп. инфа: ";
+        getline(cin, dopInfo);
+    }
+
+    void pokaz()
+    {
+        cout << "ПІБ: " << pib << endl;
+        cout << "Дом. тел: " << domTelefon << endl;
+        cout << "Рабоч. тел: " << rabTelefon << endl;
+        cout << "Моб. тел: " << mobTelefon << endl;
+        cout << "Доп. инфа: " << dopInfo << endl;
+    }
+
+    void sohranit(ofstream& file)
+    {
+        file << pib << endl;
+        file << domTelefon << endl;
+        file << rabTelefon << endl;
+        file << mobTelefon << endl;
+        file << dopInfo << endl;
+    }
+
+    void zagruzit(ifstream& file)
+    {
+        string p;
+
+        getline(file, p);
+        setPib(p.c_str());
+
+        getline(file, domTelefon);
+        getline(file, rabTelefon);
+        getline(file, mobTelefon);
+        getline(file, dopInfo);
+    }
+};
+
+class TelefonnaiaKniga
+{
+private:
+    vector<Abonent*> abonenty;
+
+public:
+    ~TelefonnaiaKniga()
+    {
+        for (int i = 0; i < abonenty.size(); i++)
+        {
+            delete abonenty[i];
+        }
+    }
+
+    void dobavit()
+    {
+        Abonent* a = new Abonent;
+
+        a->vvod();
+
+        abonenty.push_back(a);
+
+        cout << "абонент добавлен!" << endl;
+    }
+
+    void udalit()
+    {
+        string p;
+
+        cout << "введите пиб для удаления: ";
+        getline(cin, p);
+
+        for (int i = 0; i < abonenty.size(); i++)
+        {
+            if (abonenty[i]->getPib() == p)
+            {
+                delete abonenty[i];
+                abonenty.erase(abonenty.begin() + i);
+
+                cout << "абонент удален!" << endl;
+                return;
+            }
+        }
+
+        cout << "абонент не найден!" << endl;
+    }
+
+    void poisk()
+    {
+        string p;
+
+        cout << "введите пиб для поиска: ";
+        getline(cin, p);
+
+        for (int i = 0; i < abonenty.size(); i++)
+        {
+            if (abonenty[i]->getPib() == p)
+            {
+                abonenty[i]->pokaz();
+                return;
+            }
+        }
+
+        cout << "абонент не найден!" << endl;
+    }
+
+    void pokazVseh()
+    {
+        if (abonenty.size() == 0)
+        {
+            cout << "книга пуста!" << endl;
+            return;
+        }
+
+        for (int i = 0; i < abonenty.size(); i++)
+        {
+            cout << endl;
+            cout << "Абонент " << i + 1 << ":" << endl;
+            abonenty[i]->pokaz();
+        }
+    }
+
+    void sohranitVFail()
+    {
+        ofstream file("telefonnaia_kniga.txt");
+
+        file << abonenty.size() << endl;
+
+        for (int i = 0; i < abonenty.size(); i++)
+        {
+            abonenty[i]->sohranit(file);
+        }
+
+        file.close();
+
+        cout << "данные сохранены в файл!" << endl;
+    }
+
+    void zagruzitIzFaila()
+    {
+        ifstream file("telefonnaia_kniga.txt");
+
+        if (!file)
+        {
+            cout << "файл не найден!" << endl;
+            return;
+        }
+
+        for (int i = 0; i < abonenty.size(); i++)
+        {
+            delete abonenty[i];
+        }
+
+        abonenty.clear();
+
+        int kolichestvo;
+        file >> kolichestvo;
+        file.ignore();
+
+        for (int i = 0; i < kolichestvo; i++)
+        {
+            Abonent* a = new Abonent;
+
+            a->zagruzit(file);
+
+            abonenty.push_back(a);
+        }
+
+        file.close();
+
+        cout << "данные загружены!" << endl;
+    }
+};
+
+int main()
+{
+    TelefonnaiaKniga kniga;
+
+    int vibor;
+
+    do
+    {
+        cout << endl;
+        cout << "===== TELEFONNAIA KNIGA =====" << endl;
+        cout << "1. Dobavit abonenta" << endl;
+        cout << "2. Udalit abonenta" << endl;
+        cout << "3. Poisk po PIB" << endl;
+        cout << "4. Pokazat vseh" << endl;
+        cout << "5. Sohranit v fail" << endl;
+        cout << "6. Zagruzit iz faila" << endl;
+        cout << "0. Vihod" << endl;
+        cout << "Vash vibor: ";
+
+        cin >> vibor;
+        cin.ignore();
+
+        switch (vibor)
+        {
+        case 1:
+            kniga.dobavit();
+            break;
+
+        case 2:
+            kniga.udalit();
+            break;
+
+        case 3:
+            kniga.poisk();
+            break;
+
+        case 4:
+            kniga.pokazVseh();
+            break;
+
+        case 5:
+            kniga.sohranitVFail();
+            break;
+
+        case 6:
+            kniga.zagruzitIzFaila();
+            break;
+
+        case 0:
+            cout << "Программа завершена." << endl;
+            break;
+
+        default:
+            cout << "Неверный выбор!" << endl;
+        }
+
+    } while (vibor != 0);
+
+    return 0;
+}
