@@ -1,0 +1,272 @@
+```cpp
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+class Student
+{
+private:
+    string studentName;
+    int studentAge;
+
+public:
+    Student()
+    {
+        studentName = "Невідомо";
+        studentAge = 0;
+    }
+
+    Student(string name, int age)
+    {
+        studentName = name;
+        studentAge = age;
+    }
+
+    void setName(string name)
+    {
+        studentName = name;
+    }
+
+    string getName()
+    {
+        return studentName;
+    }
+
+    void setAge(int age)
+    {
+        studentAge = age;
+    }
+
+    int getAge()
+    {
+        return studentAge;
+    }
+
+    void showData()
+    {
+        cout << "Ім'я: " << studentName
+             << ", Вік: " << studentAge << endl;
+    }
+};
+
+class Group
+{
+private:
+    string nameGroup;
+    Student* studentsArray;
+    int amount;
+
+public:
+    Group()
+    {
+        nameGroup = "Без назви";
+        studentsArray = nullptr;
+        amount = 0;
+    }
+
+    Group(string name)
+    {
+        nameGroup = name;
+        studentsArray = nullptr;
+        amount = 0;
+    }
+
+    ~Group()
+    {
+        delete[] studentsArray;
+    }
+
+    void setGroupName(string name)
+    {
+        nameGroup = name;
+    }
+
+    string getGroupName()
+    {
+        return nameGroup;
+    }
+
+    int getAmount()
+    {
+        return amount;
+    }
+
+    void addStudent(Student newStudent)
+    {
+        Student* updatedArray = new Student[amount + 1];
+
+        for (int i = 0; i < amount; i++)
+        {
+            updatedArray[i] = studentsArray[i];
+        }
+
+        updatedArray[amount] = newStudent;
+
+        delete[] studentsArray;
+
+        studentsArray = updatedArray;
+        amount++;
+    }
+
+    void removeStudent(int index)
+    {
+        if (index < 0 || index >= amount)
+        {
+            cout << "Невірний номер студента!" << endl;
+            return;
+        }
+
+        Student* updatedArray = nullptr;
+
+        if (amount - 1 > 0)
+        {
+            updatedArray = new Student[amount - 1];
+
+            int newIndex = 0;
+
+            for (int i = 0; i < amount; i++)
+            {
+                if (i != index)
+                {
+                    updatedArray[newIndex] = studentsArray[i];
+                    newIndex++;
+                }
+            }
+        }
+
+        delete[] studentsArray;
+
+        studentsArray = updatedArray;
+        amount--;
+    }
+
+    void showStudents()
+    {
+        cout << "\nНазва групи: " << nameGroup << endl;
+
+        if (amount == 0)
+        {
+            cout << "У групі немає студентів." << endl;
+            return;
+        }
+
+        cout << "Студенти групи:" << endl;
+
+        for (int i = 0; i < amount; i++)
+        {
+            cout << i + 1 << ") ";
+            studentsArray[i].showData();
+        }
+    }
+};
+
+int main()
+{
+    Group* groupPtr = nullptr;
+    int choice;
+
+    do
+    {
+        cout << "\n========== МЕНЮ ==========" << endl;
+        cout << "1 - Створити нову групу" << endl;
+        cout << "2 - Додати студента" << endl;
+        cout << "3 - Видалити студента" << endl;
+        cout << "4 - Показати студентів" << endl;
+        cout << "0 - Вихід" << endl;
+        cout << "===========================" << endl;
+
+        cout << "Виберіть дію: ";
+        cin >> choice;
+
+        switch (choice)
+        {
+        case 1:
+        {
+            string groupName;
+
+            cout << "Введіть назву групи: ";
+            cin >> groupName;
+
+            delete groupPtr;
+            groupPtr = new Group(groupName);
+
+            cout << "Нову групу створено!" << endl;
+            break;
+        }
+
+        case 2:
+        {
+            if (groupPtr == nullptr)
+            {
+                cout << "Спочатку створіть групу!" << endl;
+                break;
+            }
+
+            string studentName;
+            int studentAge;
+
+            cout << "Ім'я студента: ";
+            cin >> studentName;
+
+            cout << "Вік студента: ";
+            cin >> studentAge;
+
+            Student newStudent(studentName, studentAge);
+
+            groupPtr->addStudent(newStudent);
+
+            cout << "Студента додано до групи." << endl;
+            break;
+        }
+
+        case 3:
+        {
+            if (groupPtr == nullptr)
+            {
+                cout << "Спочатку створіть групу!" << endl;
+                break;
+            }
+
+            groupPtr->showStudents();
+
+            if (groupPtr->getAmount() > 0)
+            {
+                int studentNumber;
+
+                cout << "Введіть номер студента для видалення: ";
+                cin >> studentNumber;
+
+                groupPtr->removeStudent(studentNumber - 1);
+            }
+
+            break;
+        }
+
+        case 4:
+        {
+            if (groupPtr == nullptr)
+            {
+                cout << "Спочатку створіть групу!" << endl;
+                break;
+            }
+
+            groupPtr->showStudents();
+            break;
+        }
+
+        case 0:
+            cout << "Роботу програми завершено." << endl;
+            break;
+
+        default:
+            cout << "Такого пункту меню немає!" << endl;
+        }
+
+    } while (choice != 0);
+
+    delete groupPtr;
+
+    return 0;
+}
+```
