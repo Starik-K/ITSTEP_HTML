@@ -1,0 +1,176 @@
+```cpp
+#include <iostream>
+#include <cstring>
+
+using namespace std;
+
+struct Date
+{
+    int day;
+    int month;
+    int year;
+};
+
+class Person
+{
+private:
+    char* id;
+    char* surname;
+    char* name;
+    char* patronymic;
+    Date birthday;
+
+    static int count;
+
+public:
+    Person(const char* i, const char* s, const char* n,
+           const char* p, int d, int m, int y)
+    {
+        id = new char[strlen(i) + 1];
+        strcpy(id, i);
+
+        surname = new char[strlen(s) + 1];
+        strcpy(surname, s);
+
+        name = new char[strlen(n) + 1];
+        strcpy(name, n);
+
+        patronymic = new char[strlen(p) + 1];
+        strcpy(patronymic, p);
+
+        birthday.day = d;
+        birthday.month = m;
+        birthday.year = y;
+
+        count++;
+    }
+
+    Person() : Person("0000", "Невідомий", "Невідомий",
+                      "Невідомий", 1, 1, 2000)
+    {
+    }
+
+    ~Person()
+    {
+        delete[] id;
+        delete[] surname;
+        delete[] name;
+        delete[] patronymic;
+
+        count--;
+    }
+
+    static int getCount()
+    {
+        return count;
+    }
+
+    char* getId()
+    {
+        return id;
+    }
+
+    char* getSurname()
+    {
+        return surname;
+    }
+
+    char* getName()
+    {
+        return name;
+    }
+
+    char* getPatronymic()
+    {
+        return patronymic;
+    }
+
+    Date getBirthday()
+    {
+        return birthday;
+    }
+
+    Person& setId(const char* value)
+    {
+        delete[] id;
+        id = new char[strlen(value) + 1];
+        strcpy(id, value);
+
+        return *this;
+    }
+
+    Person& setSurname(const char* value)
+    {
+        delete[] surname;
+        surname = new char[strlen(value) + 1];
+        strcpy(surname, value);
+
+        return *this;
+    }
+
+    Person& setName(const char* value)
+    {
+        delete[] name;
+        name = new char[strlen(value) + 1];
+        strcpy(name, value);
+
+        return *this;
+    }
+
+    Person& setPatronymic(const char* value)
+    {
+        delete[] patronymic;
+        patronymic = new char[strlen(value) + 1];
+        strcpy(patronymic, value);
+
+        return *this;
+    }
+
+    Person& setBirthday(int d, int m, int y)
+    {
+        this->birthday.day = d;
+        this->birthday.month = m;
+        this->birthday.year = y;
+
+        return *this;
+    }
+
+    void show()
+    {
+        cout << "ID: " << id << endl;
+        cout << "Прізвище: " << surname << endl;
+        cout << "Ім'я: " << name << endl;
+        cout << "По батькові: " << patronymic << endl;
+        cout << "Дата народження: "
+             << birthday.day << "."
+             << birthday.month << "."
+             << birthday.year << endl;
+    }
+};
+
+int Person::count = 0;
+
+int main()
+{
+    Person person1;
+
+    Person person2;
+
+    person2.setId("123456789")
+            .setSurname("Шевченко")
+            .setName("Андрій")
+            .setPatronymic("Петрович")
+            .setBirthday(12, 5, 2008);
+
+    cout << "Перша людина:" << endl;
+    person1.show();
+
+    cout << "\nДруга людина:" << endl;
+    person2.show();
+
+    cout << "\nКількість об'єктів: "
+         << Person::getCount() << endl;
+
+    return 0;
+}
+```
