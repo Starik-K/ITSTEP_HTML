@@ -1,4 +1,4 @@
-﻿
+//gokogkgok﻿
 #include <iostream>
 #include <stdexcept>
 #include <string>
